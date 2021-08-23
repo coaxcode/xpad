@@ -1247,7 +1247,7 @@ static int xpad_start_xbox_one(struct usb_xpad *xpad)
 static int xpad_start_xbox_360(struct usb_xpad *xpad)
 {
 	// only send this for the gamesir g3w for now as it breaks other devices
-	if(xpad->dev->id.vendor != 0x05ac || xpad->dev->id.device != 0x055b)
+	if(xpad->dev->id.vendor != 0x05ac || xpad->dev->id.product != 0x055b)
 		return 0;
 
 	int status;
